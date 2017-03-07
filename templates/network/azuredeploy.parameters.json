@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "resourcePrefix": {
+      "value": "configmgr-lab"
+    },
+    "subnets": {
+      "value": [
+        {
+          "subnetName": "subnet-adds",
+          "subnetPrefix": "10.10.1.0/24"
+        },
+        {
+          "subnetName": "subnet-configmgr",
+          "subnetPrefix": "10.10.2.0/24"
+        }
+      ]
+    }
+  }
+}
