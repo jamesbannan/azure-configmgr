@@ -1,0 +1,16 @@
+{
+    "name": "configmgr-primary",
+    "description": "This role is applied to Primary Site server in the ConfigMgr Azure lab environment",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+        "chef_client": {
+            "interval": 3600
+        }
+    },
+    "override_attributes": {
+    },
+    "run_list": [
+        "recipe[configmgr-primary::default]"
+    ]
+}

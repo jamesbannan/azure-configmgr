@@ -1,0 +1,13 @@
+{
+    "name": "all-nodes",
+    "description": "This role is applied to all nodes in the ConfigMgr Azure lab environment",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+    },
+    "override_attributes": {
+    },
+    "run_list": [
+        "recipe[all-nodes::default]"
+    ]
+}

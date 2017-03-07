@@ -1,0 +1,13 @@
+{
+    "name": "configmgr-dc",
+    "description": "This role is applied to the Domain Controller in the ConfigMgr Azure lab environment",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {
+    },
+    "override_attributes": {
+    },
+    "run_list": [
+        "recipe[adds-dc::default]"
+    ]
+}
