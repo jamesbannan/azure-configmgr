@@ -5,11 +5,11 @@
     "storageAccounts": {
       "value": [
         {
-          "accountName": "configmgrlabvmstorage",
+          "accountName": "[concat('vm',uniqueString(resourceGroup().id))]",
           "accountType": "Standard_LRS"
         },
         {
-          "accountName": "configmgrlabdiagnostics",
+          "accountName": "[concat('diag',uniqueString(resourceGroup().id))]",
           "accountType": "Standard_LRS"
         }
       ] 
