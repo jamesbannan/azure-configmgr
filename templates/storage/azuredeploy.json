@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "storageAccounts": {
+      "type": "array"
+    } 
+  },
+  "variables": {
+    
+  },
+  "resources": [
+    {
+      "name": "[parameters('storageAccounts')[copyIndex()].accountName]",
+      "type": "Microsoft.Storage/storageAccounts",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "2015-06-15",
+      "copy": {
+        "name": "storageAccountCopy",
+        "count": "[length(parameters('storageAccounts'))]"
+      },
+      "dependsOn": [],
+      "tags": {
+        "displayName": "[parameters('storageAccounts')[copyIndex()].accountName]"
+      },
+      "properties": {
+        "accountType": "[parameters('storageAccounts')[copyIndex()].accountType]"
+      }
+    }
+  ],
+  "outputs": {
+  }
+}
