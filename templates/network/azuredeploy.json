@@ -2,16 +2,12 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "resourcePrefix": {
-      "type": "string",
-      "minLength": 1
-    },
     "subnets": {
       "type": "array"
     } 
   },
   "variables": {
-    "vnetName": "[concat(parameters('resourcePrefix'),'-','vnet')]", 
+    "vnetName": "configmgr-lab-vnet", 
     "vnetPrefix": "10.10.0.0/16"
   },
   "resources": [
